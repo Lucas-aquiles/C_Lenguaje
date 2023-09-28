@@ -1,27 +1,32 @@
-#include <stdio.h>
 
-int main()
-{
-    int numero;
 
-    printf("Ingrese un número mayor a 0: ");
-    scanf("%d", &numero);
+#include <iostream>
 
-    if (numero <= 0)
-    {
-        printf("El número ingresado no es correcto.\n");
-        return 0;
+using namespace std;
+
+int main() {
+  int arrayNumero[10];
+
+  for (int i = 0; i < 10; i++) {
+    cout << "Ingrese un numero ";
+    cin >> arrayNumero[i];
+  };
+  int suma = 0;
+  int mayor = arrayNumero[1];
+
+  for (int i = 0; i < 10; i++) {
+    if (i % 2 == 0) {
+      suma += arrayNumero[i];
+    } else {
+      if (arrayNumero[i] > mayor) {
+        mayor = arrayNumero[i];
+      }
     }
+  }
 
-    printf("Los divisores de %d son:\n",numero);
+//   // Imprimimos los resultados
+  cout << "La suma de los elementos en posiciones pares es " << suma << endl;
+  cout << "El mayor número en posiciones impares es " << mayor << endl;
 
-    for (int i = 1; i <= numero; i++)
-    {
-        if (numero % i == 0)
-        {
-            printf("%d\n", i);
-        }
-    }
-
-    return 0;
+  return 0;
 }
