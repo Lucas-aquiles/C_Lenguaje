@@ -6,7 +6,6 @@ using namespace std;
 
 int main()
 {
-  // Declaramos un vector de 10 enteros
   int numeros[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
   int aux;
